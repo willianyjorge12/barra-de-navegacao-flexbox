@@ -1,0 +1,157 @@
+/* 1. ESTILOS GERAIS */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0; /* Remove a margem padrão do body */
+
+    background-color: #f4f4f4;
+
+}
+
+ 
+
+/* Estilos para o conteúdo de exemplo, apenas para preencher a página */
+
+.content {
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+ 
+
+ 
+
+/* 2. O CABEÇALHO (HEADER) - O FOCO DO NOSSO ESTUDO! */
+
+.main-header {
+
+    background-color: #ffffff;
+
+    padding: 15px 30px; /* 15px de padding em cima/baixo, 30px nos lados */
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+   
+
+    /* ----- APROFUNDANDO NO FLEXBOX ----- */
+
+    display: flex; /* Transforma o header em um flex container */
+
+   
+
+    /*
+
+     * "justify-content" controla o alinhamento no EIXO PRINCIPAL (horizontal).
+
+     * "space-between" é extremamente útil: ele empurra o primeiro item
+
+     * (logo) para o início e o último item (nav) para o final,
+
+     * distribuindo o espaço restante entre eles (se houvesse mais itens).
+
+     */
+
+    justify-content: space-between;
+
+   
+
+    /* "align-items" (do projeto anterior) garante que o logo e a navegação
+
+     * fiquem alinhados verticalmente no centro.
+
+     */
+
+    align-items: center;
+
+}
+
+ 
+
+ 
+
+/* 3. ESTILOS DO LOGOTIPO */
+
+.logo {
+
+    font-size: 1.8rem; /* Tamanho grande para o logo */
+
+    font-weight: bold;
+
+    color: #333;
+
+    text-decoration: none; /* Remove o sublinhado do link */
+
+}
+
+ 
+
+ 
+
+/* 4. ESTILOS DA NAVEGAÇÃO (NAV) */
+
+/* Estilos para a lista <ul> */
+
+.main-nav ul {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none; /* Remove os pontos (bullets) da lista */
+
+   
+
+    /* Transformamos a <ul> em um flex container também!
+
+     * Isso alinhará todos os seus filhos (os <li>) lado a lado.
+
+     */
+
+    display: flex;
+
+    gap: 25px; /* Cria um espaço entre cada item do menu */
+
+}
+
+ 
+
+/* Estilos para os links <a> dentro da navegação */
+
+.main-nav a {
+
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    padding-bottom: 5px; /* Espaço para a borda do :hover aparecer */
+
+    transition: color 0.3s, border-bottom-color 0.3s; /* Animação suave */
+
+}
+
+ 
+
+/*
+
+ * A pseudo-classe ":hover" aplica estilos quando o mouse
+
+ * está em cima do elemento. É essencial para dar feedback ao usuário.
+
+ */
+
+.main-nav a:hover {
+
+    color: #007bff; /* Muda a cor do texto */
+
+    border-bottom: 2px solid #007bff; /* Adiciona uma borda inferior */
+
+}
